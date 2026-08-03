@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRM App - Contacts</title>
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/variables.css">
+    <link rel="stylesheet" href="styles/layout.css">
+    <link rel="stylesheet" href="styles/components.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .contacts-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: var(--spacing-lg);
+        }
+        .contacts-header h2 {
+            font-size: var(--font-size-xl);
+            color: var(--color-dark);
+        }
+        .search-filter-bar {
+            display: flex;
+            gap: var(--spacing-md);
+            margin-bottom: var(--spacing-lg);
+        }
+        .search-filter-bar .input-field {
+            flex-grow: 1;
+        }
+        .search-filter-bar .select-field {
+            padding: var(--spacing-sm);
+            border: 1px solid var(--color-neutral-300);
+            border-radius: var(--border-radius-sm);
+            background-color: var(--color-light);
+            color: var(--color-text-dark);
+        }
+        .table-actions {
+            display: flex;
+            justify-content: flex-end;
+            margin-top: var(--spacing-md);
+        }
+        .action-button {
+            margin-left: var(--spacing-sm);
+            color: var(--color-primary);
+        }
+        .action-button:hover {
+            color: var(--color-dark);
+        }
+    </style>
+</head>
+<body>
+    <div class="app-layout">
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <div class="sidebar-logo">CRM App</div>
+            </div>
+            <nav class="sidebar-nav">
+                <ul class="sidebar-nav-list">
+                    <li class="sidebar-nav-item"><a href="dashboard.html"><i class="fas fa-tachometer-alt"></i> <span>Dashboard</span></a></li>
+                    <li class="sidebar-nav-item"><a href="contacts.html" class="active"><i class="fas fa-address-book"></i> <span>Contacts</span></a></li>
+                    <li class="sidebar-nav-item"><a href="pipeline.html"><i class="fas fa-project-diagram"></i> <span>Pipeline</span></a></li>
+                    <li class="sidebar-nav-item"><a href="settings.html"><i class="fas fa-cog"></i> <span>Settings</span></a></li>
+                    <li class="sidebar-nav-item"><a href="index.html"><i class="fas fa-sign-out-alt"></i> <span>Logout</span></a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="topbar">
+            <h2>Contacts</h2>
+        </div>
+        <main class="main-content">
+            <div class="contacts-header">
+                <h2>Your Contacts</h2>
+                <a href="contact-form.html" class="btn btn-primary"><i class="fas fa-plus"></i> Add Contact</a>
+            </div>
+
+            <div class="search-filter-bar">
+                <input type="text" class="input-field" placeholder="Search contacts...">
+                <select class="select-field">
+                    <option value="">All Tags</option>
+                    <option value="customer">Customer</option>
+                    <option value="lead">Lead</option>
+                    <option value="partner">Partner</option>
+                </select>
+            </div>
+
+            <div class="card">
+                <div class="table-container">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Phone</th>
+                                <th>Company</th>
+                                <th>Tags</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>John Doe</td>
+                                <td>john.doe@example.com</td>
+                                <td>123-456-7890</td>
+                                <td>ABC Corp</td>
+                                <td><span class="badge badge-primary">Customer</span></td>
+                                <td>
+                                    <a href="contact-form.html" class="action-button" title="Edit"><i class="fas fa-edit"></i></a>
+                                    <button class="action-button" title="Delete"><i class="fas fa-trash-alt"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Jane Smith</td>
+                                <td>jane.smith@example.com</td>
+                                <td>987-654-3210</td>
+                                <td>XYZ Inc</td>
+                                <td><span class="badge badge-secondary">Lead</span></td>
+                                <td>
+                                    <a href="contact-form.html" class="action-button" title="Edit"><i class="fas fa-edit"></i></a>
+                                    <button class="action-button" title="Delete"><i class="fas fa-trash-alt"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Peter Jones</td>
+                                <td>peter.jones@example.com</td>
+                                <td>555-123-4567</td>
+                                <td>Global Solutions</td>
+                                <td><span class="badge badge-info">Partner</span></td>
+                                <td>
+                                    <a href="contact-form.html" class="action-button" title="Edit"><i class="fas fa-edit"></i></a>
+                                    <button class="action-button" title="Delete"><i class="fas fa-trash-alt"></i></button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

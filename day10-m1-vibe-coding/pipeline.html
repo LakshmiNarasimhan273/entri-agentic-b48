@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRM App - Pipeline</title>
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/variables.css">
+    <link rel="stylesheet" href="styles/layout.css">
+    <link rel="stylesheet" href="styles/components.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .pipeline-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: var(--spacing-lg);
+        }
+        .pipeline-header h2 {
+            font-size: var(--font-size-xl);
+            color: var(--color-dark);
+        }
+        .pipeline-board {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: var(--spacing-lg);
+            overflow-x: auto;
+            padding-bottom: var(--spacing-md); /* For potential scrollbar */
+        }
+        .pipeline-column {
+            background-color: var(--color-neutral-100);
+            border-radius: var(--border-radius-md);
+            padding: var(--spacing-md);
+            box-shadow: var(--shadow-sm);
+            display: flex;
+            flex-direction: column;
+            min-width: 280px; /* Ensure columns don't shrink too much */
+        }
+        .pipeline-column-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: var(--spacing-md);
+            padding-bottom: var(--spacing-sm);
+            border-bottom: 1px solid var(--color-neutral-200);
+        }
+        .pipeline-column-header h3 {
+            font-size: var(--font-size-lg);
+            font-weight: var(--font-weight-bold);
+            color: var(--color-dark);
+        }
+        .pipeline-column-header .deal-count {
+            background-color: var(--color-neutral-300);
+            color: var(--color-dark);
+            padding: var(--spacing-xxs) var(--spacing-xs);
+            border-radius: var(--border-radius-full);
+            font-size: var(--font-size-sm);
+            font-weight: var(--font-weight-medium);
+        }
+        .deal-cards {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            gap: var(--spacing-md);
+        }
+        .deal-card {
+            background-color: var(--color-bg-light);
+            border-radius: var(--border-radius-md);
+            box-shadow: var(--shadow-sm);
+            padding: var(--spacing-md);
+            border: 1px solid var(--color-neutral-200);
+            cursor: grab;
+            transition: transform 0.1s ease-in-out;
+        }
+        .deal-card:active {
+            cursor: grabbing;
+        }
+        .deal-card-title {
+            font-weight: var(--font-weight-medium);
+            margin-bottom: var(--spacing-xxs);
+        }
+        .deal-card-details {
+            font-size: var(--font-size-sm);
+            color: var(--color-neutral-600);
+        }
+        .deal-card-details span {
+            display: block;
+        }
+        .deal-card-actions {
+            margin-top: var(--spacing-sm);
+            display: flex;
+            justify-content: flex-end;
+            gap: var(--spacing-sm);
+        }
+        .deal-card-actions .action-button {
+            color: var(--color-secondary);
+        }
+        .deal-card-actions .action-button:hover {
+            color: var(--color-dark);
+        }
+    </style>
+</head>
+<body>
+    <div class="app-layout">
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <div class="sidebar-logo">CRM App</div>
+            </div>
+            <nav class="sidebar-nav">
+                <ul class="sidebar-nav-list">
+                    <li class="sidebar-nav-item"><a href="dashboard.html"><i class="fas fa-tachometer-alt"></i> <span>Dashboard</span></a></li>
+                    <li class="sidebar-nav-item"><a href="contacts.html"><i class="fas fa-address-book"></i> <span>Contacts</span></a></li>
+                    <li class="sidebar-nav-item"><a href="pipeline.html" class="active"><i class="fas fa-project-diagram"></i> <span>Pipeline</span></a></li>
+                    <li class="sidebar-nav-item"><a href="settings.html"><i class="fas fa-cog"></i> <span>Settings</span></a></li>
+                    <li class="sidebar-nav-item"><a href="index.html"><i class="fas fa-sign-out-alt"></i> <span>Logout</span></a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="topbar">
+            <h2>Sales Pipeline</h2>
+        </div>
+        <main class="main-content">
+            <div class="pipeline-header">
+                <h2>Deal Pipeline</h2>
+                <button class="btn btn-primary"><i class="fas fa-plus"></i> Add Deal</button>
+            </div>
+
+            <div class="pipeline-board">
+                <div class="pipeline-column">
+                    <div class="pipeline-column-header">
+                        <h3>New</h3>
+                        <span class="deal-count">3 Deals</span>
+                    </div>
+                    <div class="deal-cards">
+                        <div class="deal-card">
+                            <div class="deal-card-title">Website Redesign</div>
+                            <div class="deal-card-details">
+                                <span>Value: $5,000</span>
+                                <span>Contact: Alice Brown</span>
+                                <span>Due: 2026-08-15</span>
+                            </div>
+                            <div class="deal-card-actions">
+                                <button class="action-button" title="Edit"><i class="fas fa-edit"></i></button>
+                                <button class="action-button" title="Delete"><i class="fas fa-trash-alt"></i></button>
+                            </div>
+                        </div>
+                        <div class="deal-card">
+                            <div class="deal-card-title">SEO Optimization</div>
+                            <div class="deal-card-details">
+                                <span>Value: $2,500</span>
+                                <span>Contact: Bob Johnson</span>
+                                <span>Due: 2026-08-20</span>
+                            </div>
+                            <div class="deal-card-actions">
+                                <button class="action-button" title="Edit"><i class="fas fa-edit"></i></button>
+                                <button class="action-button" title="Delete"><i class="fas fa-trash-alt"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pipeline-column">
+                    <div class="pipeline-column-header">
+                        <h3>Contacted</h3>
+                        <span class="deal-count">2 Deals</span>
+                    </div>
+                    <div class="deal-cards">
+                        <div class="deal-card">
+                            <div class="deal-card-title">Marketing Campaign</div>
+                            <div class="deal-card-details">
+                                <span>Value: $10,000</span>
+                                <span>Contact: Carol White</span>
+                                <span>Due: 2026-08-25</span>
+                            </div>
+                            <div class="deal-card-actions">
+                                <button class="action-button" title="Edit"><i class="fas fa-edit"></i></button>
+                                <button class="action-button" title="Delete"><i class="fas fa-trash-alt"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pipeline-column">
+                    <div class="pipeline-column-header">
+                        <h3>Qualified</h3>
+                        <span class="deal-count">1 Deal</span>
+                    </div>
+                    <div class="deal-cards">
+                        <div class="deal-card">
+                            <div class="deal-card-title">Software Development</div>
+                            <div class="deal-card-details">
+                                <span>Value: $20,000</span>
+                                <span>Contact: David Green</span>
+                                <span>Due: 2026-09-01</span>
+                            </div>
+                            <div class="deal-card-actions">
+                                <button class="action-button" title="Edit"><i class="fas fa-edit"></i></button>
+                                <button class="action-button" title="Delete"><i class="fas fa-trash-alt"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pipeline-column">
+                    <div class="pipeline-column-header">
+                        <h3>Won/Lost</h3>
+                        <span class="deal-count">1 Deal</span>
+                    </div>
+                    <div class="deal-cards">
+                        <div class="deal-card">
+                            <div class="deal-card-title">Consulting Services (Won)</div>
+                            <div class="deal-card-details">
+                                <span>Value: $7,500</span>
+                                <span>Contact: Eve Black</span>
+                                <span>Closed: 2026-07-20</span>
+                            </div>
+                            <div class="deal-card-actions">
+                                <button class="action-button" title="Edit"><i class="fas fa-edit"></i></button>
+                                <button class="action-button" title="Delete"><i class="fas fa-trash-alt"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRM App - Add/Edit Contact</title>
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/variables.css">
+    <link rel="stylesheet" href="styles/layout.css">
+    <link rel="stylesheet" href="styles/components.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .contact-form-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: var(--spacing-lg);
+        }
+        .contact-form-header h2 {
+            font-size: var(--font-size-xl);
+            color: var(--color-dark);
+        }
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: var(--spacing-md);
+        }
+        @media (min-width: 768px) {
+            .form-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        .full-width {
+            grid-column: 1 / -1;
+        }
+        .form-actions {
+            display: flex;
+            justify-content: flex-end;
+            gap: var(--spacing-md);
+            margin-top: var(--spacing-lg);
+        }
+    </style>
+</head>
+<body>
+    <div class="app-layout">
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <div class="sidebar-logo">CRM App</div>
+            </div>
+            <nav class="sidebar-nav">
+                <ul class="sidebar-nav-list">
+                    <li class="sidebar-nav-item"><a href="dashboard.html"><i class="fas fa-tachometer-alt"></i> <span>Dashboard</span></a></li>
+                    <li class="sidebar-nav-item"><a href="contacts.html" class="active"><i class="fas fa-address-book"></i> <span>Contacts</span></a></li>
+                    <li class="sidebar-nav-item"><a href="pipeline.html"><i class="fas fa-project-diagram"></i> <span>Pipeline</span></a></li>
+                    <li class="sidebar-nav-item"><a href="settings.html"><i class="fas fa-cog"></i> <span>Settings</span></a></li>
+                    <li class="sidebar-nav-item"><a href="index.html"><i class="fas fa-sign-out-alt"></i> <span>Logout</span></a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="topbar">
+            <h2>Add/Edit Contact</h2>
+        </div>
+        <main class="main-content">
+            <div class="contact-form-header">
+                <h2>Add New Contact</h2>
+                <a href="contacts.html" class="btn btn-secondary"><i class="fas fa-arrow-left"></i> Back to Contacts</a>
+            </div>
+
+            <div class="card">
+                <form>
+                    <div class="form-grid">
+                        <div class="input-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" class="input-field" placeholder="Contact's Full Name">
+                        </div>
+                        <div class="input-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" class="input-field" placeholder="contact@example.com">
+                        </div>
+                        <div class="input-group">
+                            <label for="phone">Phone</label>
+                            <input type="tel" id="phone" class="input-field" placeholder="123-456-7890">
+                        </div>
+                        <div class="input-group">
+                            <label for="company">Company</label>
+                            <input type="text" id="company" class="input-field" placeholder="Company Name">
+                        </div>
+                        <div class="input-group full-width">
+                            <label for="tags">Tags (comma separated)</label>
+                            <input type="text" id="tags" class="input-field" placeholder="e.g., customer, lead, VIP">
+                        </div>
+                        <div class="input-group full-width">
+                            <label for="notes">Notes</label>
+                            <textarea id="notes" class="input-field" rows="5" placeholder="Any additional notes about the contact..."></textarea>
+                        </div>
+                    </div>
+                    <div class="form-actions">
+                        <button type="reset" class="btn btn-secondary">Reset</button>
+                        <button type="submit" class="btn btn-primary">Save Contact</button>
+                    </div>
+                </form>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
