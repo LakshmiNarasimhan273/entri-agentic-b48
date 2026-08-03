@@ -1,0 +1,24 @@
+h1{
+    text-align: center;
+    font-size: 2rem;
+    color: blueviolet;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+p{
+    text-align: justify;
+    font-size: 1.5rem;
+    color: blue;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+    line-height: 1.8;
+    /* letter-spacing: 3px; */
+    font-weight: 400;
+    font-style: italic;
+    text-decoration: underline;
+}
+
+/* clarifications of properties */
+/* % - width, height */
+/* px - common property */
+/* rem - font-size */
