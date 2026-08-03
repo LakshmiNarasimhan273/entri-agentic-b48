@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form tag example</title>
+</head>
+<body>
+    <h1>HTML Form tag example</h1>
+<!-- regex pattern -->
+    <form>
+        <div>
+            <label for="username">Enter your name</label>
+            <input pattern="[A-Za-z]{3,20}" name="username" type="text" required>
+        </div> <br>
+
+        <div>
+            <label>Enter your email</label>
+            <input type="email" required>
+        </div>
+
+        <div>
+            <label for="">Enter your password</label>
+            <input type="password" required>
+        </div>
+
+        <div>
+            <label for="">Enter your mobile number</label>
+            <input type="tel" required>
+        </div>
+
+        <div>
+            <label for="">Enter your age</label>
+            <input type="number" required>
+        </div>
+
+        <div>
+            <label for="">Enter your DOB</label>
+            <input type="date" required>
+        </div>
+
+        <div>
+            <label for="">Preferred time</label>
+            <input type="time" required>
+        </div>
+
+        <div>
+            <label for="">Upload your resume</label>
+            <input type="file" required>
+        </div>
+
+        <div>
+            <label for="">Gender *</label>
+            <input name="gender" required type="radio">Male
+            <input name="gender" type="radio">Female
+            <input name="gender" type="radio">Others
+        </div>
+
+        <div>
+            <label for="">Select your state</label>
+            <select name="" id="" required>
+                <option value="">Tamil nadu</option>
+                <option value="">Karnataka</option>
+            </select>
+        </div>
+
+        <div>
+            <input type="checkbox" required>
+            <label for="">Terms & Conditions</label>
+        </div>
+
+        <input type="submit" value="Complete Registration">
+
+        </form>
+
+
+</body>
+</html>
