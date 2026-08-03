@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Dashboard</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <!-- navigation bar(designed in bootstrap), responsiveness - checked -->
+    <div class="navbar navbar-expand-lg navbar-dark bg-primary">
+      <div class="container">
+        <a href="" class="navbar-brand">LearnCode</a>
+
+        <button
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarMenu"
+          class="navbar-toggler"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarMenu">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="">Courses</a></li>
+            <li class="nav-item"><a class="nav-link" href="">My Profile</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hero Section -->
+    <div class="bg-light py-5">
+      <div class="container text-center">
+        <h1 class="display-2 fw-bold">Welcome Learners</h1>
+        <p class="lead">
+          Learn about web development and building real projects.
+        </p>
+
+        <button class="btn btn-primary btn-lg">Start Learning</button>
+      </div>
+    </div>
+
+    <!-- Cards -->
+    <div class="container my-5">
+      <h2 class="text-center mb-4 site-title">Popular Courses</h2>
+
+      <!-- parent div for my cards -->
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <!-- card 1 -->
+          <div class="card shadow">
+            <img
+              class="card-img-top"
+              src="https://i.pinimg.com/1200x/9b/4e/e0/9b4ee057076232fb57c48cf80947f8a7.jpg"
+              alt=""
+            />
+            <div class="card-body">
+              <h5>Frontend Development</h5>
+              <p>Learn about frontend technologies</p>
+              <span class="badge bg-success">Beginner</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- card 2 -->
+        <div class="col-md-4 mb-4">
+          <div class="card shadow">
+            <img
+              class="card-img-top"
+              src="https://i.pinimg.com/1200x/f3/4a/02/f34a0218dd2e38726c52ac763df55fa7.jpg"
+              alt=""
+            />
+            <div class="card-body">
+              <h5>Backend Development</h5>
+              <p>Learn about backend technologies</p>
+              <span class="badge bg-warning">Intermediate</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- card 3 -->
+        <div class="col-md-4 mb-4">
+          <div class="card shadow">
+            <img
+              class="card-img-top"
+              src="https://i.pinimg.com/736x/a9/db/4a/a9db4a2588cb3b7a6776ab11a483a50a.jpg"
+              alt=""
+            />
+            <div class="card-body">
+              <h5>Fullstack Development</h5>
+              <p>Learn about fullstack technologies</p>
+              <span class="badge bg-danger">Advanced</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Banner -->
+    <div class="container">
+      <div class="alert alert-warning">New JavaScript Course is Available!</div>
+    </div>
+
+    <!-- Table -->
+    <div class="container my-5">
+      <h2 class="text-center mb-3">Learner Progress</h2>
+
+      <table class="table table-bordered">
+        <thead class="table-primary">
+          <tr>
+            <th>Name</th>
+            <th>Course</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>Rahul</td>
+            <td>Frontend Development</td>
+            <td>Learning</td>
+          </tr>
+
+          <tr>
+            <td>John</td>
+            <td>Backend Development</td>
+            <td>Completed</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Progress -->
+    <div class="container my-5">
+      <h2 class="text-center ,b-4">Skill Strength</h2>
+
+      <p>Frontend Development</p>
+      <div class="progress mb-3">
+        <div class="progress-bar bg-danger" style="width: 90%;">90%</div>
+      </div>
+
+      <p>Backend Development</p>
+      <div class="progress mb-3">
+        <div class="progress-bar bg-primary" style="width: 60%;">60%</div>
+      </div>
+
+      <p>Fullstack Development</p>
+      <div class="progress mb-3">
+        <div class="progress-bar bg-info" style="width: 30%;">30%</div>
+      </div>
+    </div>
+
+    <!-- Form Section -->
+
+    <div class="bg-dark text-white text-center p-3">
+       &copy; 2026 LearnCode. All rights reserved
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
