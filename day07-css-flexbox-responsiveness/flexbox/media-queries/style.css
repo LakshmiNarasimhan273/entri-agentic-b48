@@ -1,0 +1,22 @@
+/* mobile first pattern */
+/* mobile design(default) */
+body{
+    background-color: black;
+    color: white;
+}
+
+/* tablet */
+@media(min-width: 768px){
+    body{
+        background-color: green;
+        color: black;
+    }
+}
+
+/* laptop */
+@media(min-width: 1048px){
+    body{
+        background-color: blue;
+        color: white;
+    }
+}
