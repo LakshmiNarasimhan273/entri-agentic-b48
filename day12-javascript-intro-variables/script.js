@@ -42,6 +42,6 @@ console.log(entri);
 var entri = "edtech";
 
 console.log(laptop);
-const laptop;
+// const laptop;
 
 // module 1 - week 4 - javascript syntax
