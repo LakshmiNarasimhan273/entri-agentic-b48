@@ -76,20 +76,6 @@
         </div>
     </div>
 
-     <script>
-        document.querySelector('form').addEventListener('submit', function (e) {
-            e.preventDefault(); // stop the default page reload/GET submission
-
-            const email = document.getElementById('email').value.trim();
-            const password = document.getElementById('password').value.trim();
-
-            // TODO: replace with real validation / API call
-            if (email && password) {
-                window.location.href = 'dashboard.html';
-            } else {
-                alert('Please enter both email and password.');
-            }
-        });
-    </script>
+    <script type="module" src="js/auth.js"></script>
 </body>
 </html>
