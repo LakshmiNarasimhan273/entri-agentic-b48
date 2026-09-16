@@ -1,0 +1,16 @@
+{
+  "employees": [
+    {
+      "name": "Lakshmi Narasimhan S",
+      "email": "lakshmin.ns@entri.me",
+      "phone": "7010036699",
+      "department": "Testing",
+      "designation": "Developer",
+      "salary": "123",
+      "joiningDate": "2026-09-09",
+      "status": "Active",
+      "id": "9-xhzgZo-zc"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
