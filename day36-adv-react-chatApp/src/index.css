@@ -1,0 +1,41 @@
+/* Only the styles Bootstrap utilities can't cover. */
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  background-color: #f0f2f5;
+}
+
+/* Use dynamic viewport height so mobile browser bars don't cut off the input */
+.chat-app {
+  height: 100vh;
+  height: 100dvh;
+}
+
+/* Lets flex children scroll instead of growing the page */
+.scroll-area {
+  min-height: 0;
+  overflow-y: auto;
+}
+
+.avatar {
+  width: 44px;
+  height: 44px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.message-bubble {
+  max-width: 75%;
+  word-break: break-word;
+}
+
+@media (min-width: 992px) {
+  .message-bubble {
+    max-width: 60%;
+  }
+}
