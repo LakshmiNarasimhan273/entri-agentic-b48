@@ -1,0 +1,37 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.sidebar {
+  width: 240px;
+  min-height: 100vh;
+}
+
+.sidebar-link {
+  display: block;
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  margin-bottom: 8px;
+  border-radius: 5px;
+}
+
+.sidebar-link:hover {
+  background-color: #343a40;
+}
+
+.kanban-column {
+  background-color: #f1f3f5;
+  min-height: 500px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.kanban-column .card {
+  cursor: grab;
+}
+
+.kanban-column .card:active {
+  cursor: grabbing;
+}

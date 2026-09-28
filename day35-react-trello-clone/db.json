@@ -1,0 +1,53 @@
+{
+  "tasks": [
+    {
+      "id": "1",
+      "title": "Create Login Page",
+      "description": "Create a simple login page using React and Bootstrap.",
+      "status": "todo",
+      "priority": "High",
+      "assignee": "Arunkumar"
+    },
+    {
+      "id": "2",
+      "title": "Build Dashboard",
+      "description": "Create the dashboard for the task management application.",
+      "status": "in-progress",
+      "priority": "Medium",
+      "assignee": "Priya"
+    },
+    {
+      "id": "3",
+      "title": "Test API",
+      "description": "Test the task CRUD API operations.",
+      "status": "completed",
+      "priority": "Low",
+      "assignee": "Karthik"
+    },
+    {
+      "id": "4",
+      "title": "Create Task Form",
+      "description": "Create a form to add new tasks.",
+      "status": "in-progress",
+      "priority": "High",
+      "assignee": "Divya"
+    },
+    {
+      "id": "5",
+      "title": "Design Kanban Board",
+      "description": "Create the Kanban board with three status columns.",
+      "status": "todo",
+      "priority": "Medium",
+      "assignee": "Rahul"
+    },
+    {
+      "title": "Test",
+      "description": "Debug the application",
+      "status": "completed",
+      "priority": "High",
+      "assignee": "Arun",
+      "id": "1sZCivy2aP0"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
