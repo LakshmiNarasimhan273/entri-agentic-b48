@@ -1,0 +1,340 @@
+/* pages.css - Page-specific styling
+   (moved here from the <style> blocks of the original HTML pages) */
+
+/* ---------- Login / Register ---------- */
+.auth-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: var(--color-neutral-100);
+}
+.login-container,
+.signup-container {
+  background-color: var(--color-bg-light);
+  padding: var(--spacing-xl);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-lg);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+.login-container h1,
+.signup-container h1 {
+  font-size: var(--font-size-xl);
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-lg);
+}
+.auth-page .input-group {
+  margin-bottom: var(--spacing-md);
+  text-align: left;
+}
+.login-container .form-actions {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  margin-top: var(--spacing-lg);
+}
+.signup-container .form-actions {
+  margin-top: var(--spacing-lg);
+}
+.login-container .form-actions .btn,
+.signup-container .form-actions .btn {
+  width: 100%;
+}
+.link-text {
+  margin-top: var(--spacing-md);
+  font-size: var(--font-size-sm);
+}
+.link-text a {
+  color: var(--color-primary);
+  font-weight: var(--font-weight-medium);
+}
+
+/* ---------- Dashboard ---------- */
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--spacing-lg);
+  margin-bottom: var(--spacing-xl);
+}
+.dashboard-card .card-body {
+  text-align: center;
+}
+.dashboard-card .card-body .value {
+  font-size: var(--font-size-xxl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-xs);
+}
+.dashboard-card .card-body .label {
+  font-size: var(--font-size-md);
+  color: var(--color-neutral-600);
+}
+.activity-list .activity-item {
+  display: flex;
+  align-items: center;
+  padding: var(--spacing-md) 0;
+  border-bottom: 1px solid var(--color-neutral-200);
+}
+.activity-list .activity-item:last-child {
+  border-bottom: none;
+}
+.activity-list .activity-icon {
+  font-size: var(--font-size-lg);
+  color: var(--color-secondary);
+  margin-right: var(--spacing-md);
+}
+.activity-list .activity-details {
+  flex-grow: 1;
+}
+.activity-list .activity-details .title {
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-dark);
+}
+.activity-list .activity-details .time {
+  font-size: var(--font-size-sm);
+  color: var(--color-neutral-500);
+}
+@media (max-width: 639px) {
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---------- Contacts ---------- */
+.contacts-header,
+.contact-form-header,
+.pipeline-header,
+.settings-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-lg);
+}
+.contacts-header h2,
+.contact-form-header h2,
+.pipeline-header h2,
+.settings-header h2 {
+  font-size: var(--font-size-xl);
+  color: var(--color-dark);
+}
+.search-filter-bar {
+  display: flex;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-lg);
+}
+.search-filter-bar .input-field {
+  flex-grow: 1;
+}
+.search-filter-bar .select-field {
+  padding: var(--spacing-sm);
+  border: 1px solid var(--color-neutral-300);
+  border-radius: var(--border-radius-sm);
+  background-color: var(--color-light);
+  color: var(--color-text-dark);
+}
+.action-button {
+  margin-left: var(--spacing-sm);
+  color: var(--color-primary);
+}
+.action-button:hover {
+  color: var(--color-dark);
+}
+.badge + .badge {
+  margin-left: var(--spacing-xxs);
+}
+.empty-row {
+  text-align: center;
+  color: var(--color-neutral-600);
+}
+
+/* ---------- Contact form & Settings (shared form layout) ---------- */
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-md);
+}
+@media (min-width: 768px) {
+  .form-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+.full-width {
+  grid-column: 1 / -1;
+}
+.card .form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-lg);
+}
+
+/* ---------- Pipeline ---------- */
+.pipeline-board {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--spacing-lg);
+  overflow-x: auto;
+  padding-bottom: var(--spacing-md);
+}
+.pipeline-column {
+  background-color: var(--color-neutral-100);
+  border-radius: var(--border-radius-md);
+  padding: var(--spacing-md);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  min-width: 280px;
+}
+.pipeline-column-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-md);
+  padding-bottom: var(--spacing-sm);
+  border-bottom: 1px solid var(--color-neutral-200);
+}
+.pipeline-column-header h3 {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-dark);
+}
+.pipeline-column-header .deal-count {
+  background-color: var(--color-neutral-300);
+  color: var(--color-dark);
+  padding: var(--spacing-xxs) var(--spacing-xs);
+  border-radius: var(--border-radius-full);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+}
+.deal-cards {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  min-height: 80px; /* keeps empty columns droppable */
+  border-radius: var(--border-radius-md);
+  transition: background-color 0.15s ease;
+}
+.deal-cards.is-dragging-over {
+  background-color: var(--color-neutral-200);
+}
+.deal-card {
+  background-color: var(--color-bg-light);
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--shadow-sm);
+  padding: var(--spacing-md);
+  border: 1px solid var(--color-neutral-200);
+  cursor: grab;
+}
+.deal-card:active {
+  cursor: grabbing;
+}
+.deal-card-title {
+  font-weight: var(--font-weight-medium);
+  margin-bottom: var(--spacing-xxs);
+}
+.deal-card-details {
+  font-size: var(--font-size-sm);
+  color: var(--color-neutral-600);
+}
+.deal-card-details span {
+  display: block;
+}
+.deal-card-actions {
+  margin-top: var(--spacing-sm);
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--spacing-sm);
+}
+.deal-card-actions .action-button {
+  color: var(--color-secondary);
+}
+.deal-card-actions .action-button:hover {
+  color: var(--color-dark);
+}
+
+/* Deal modal (the original modal styles are static; make them usable) */
+.modal-overlay .modal-content {
+  transform: none;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+.modal-overlay select.input-field {
+  width: 100%;
+}
+
+/* ---------- Settings ---------- */
+.profile-section,
+.password-section,
+.notifications-section {
+  margin-bottom: var(--spacing-xl);
+}
+.profile-section h3,
+.password-section h3,
+.notifications-section h3 {
+  font-size: var(--font-size-lg);
+  margin-bottom: var(--spacing-md);
+  color: var(--color-primary);
+  border-bottom: 1px solid var(--color-neutral-200);
+  padding-bottom: var(--spacing-sm);
+}
+.avatar-upload {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-lg);
+}
+.avatar-preview {
+  width: 80px;
+  height: 80px;
+  border-radius: var(--border-radius-full);
+  background-color: var(--color-neutral-300);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--font-size-xxl);
+  color: var(--color-neutral-600);
+  overflow: hidden;
+}
+.avatar-preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.checkbox-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: var(--spacing-sm);
+}
+.checkbox-group input[type="checkbox"] {
+  margin-right: var(--spacing-xs);
+  width: 18px;
+  height: 18px;
+}
+.success-message {
+  margin-top: var(--spacing-md);
+  color: var(--color-success);
+  font-size: var(--font-size-sm);
+}
+
+/* ---------- Mobile menu (sidebar was hidden on mobile with no way to open it) ---------- */
+.menu-toggle {
+  display: none;
+  color: var(--color-text-light);
+  font-size: var(--font-size-lg);
+  margin-right: var(--spacing-md);
+}
+@media (max-width: 639px) {
+  .menu-toggle {
+    display: inline-block;
+  }
+  .sidebar.is-open {
+    display: flex;
+    transform: translateX(0);
+  }
+  .search-filter-bar {
+    flex-direction: column;
+  }
+}
