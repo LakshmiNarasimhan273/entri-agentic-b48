@@ -1,0 +1,11 @@
+const express = require("express");
+const router = express.Router();
+
+const productController = require("../controllers/product.controller");
+const validateProduct = require("../middleware/validateProduct");
+
+router.get("/", productController.getProducts);
+
+router.post("/", validateProduct, productController.createProduct);
+
+module.exports = router;
