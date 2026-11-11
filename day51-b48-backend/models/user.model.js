@@ -15,6 +15,11 @@ const userSchema = new mongoose.Schema({
         type: String,
         required: true,
         minLength: 6
+    },
+    role: {
+        type: String,
+        required: true,
+        enum: ["customer", "seller"]
     }
 });
 

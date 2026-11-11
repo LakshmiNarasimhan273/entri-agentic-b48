@@ -6,3 +6,6 @@
 
 # 9th Nov - Backend Database CRUD Operations
 ## Worked on the Products Model, Service & Controller folders for performing the CRUD operations.
+
+# 11th Nov - Authentication
+## user - model, service, security and routes folders have my affected and performed the user login with token and password hashing for registration
