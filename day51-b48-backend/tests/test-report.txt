@@ -1,0 +1,22 @@
+Endpoint 
+http://localhost:8081/products - GET
+
+// Approach1:
+10 Vus approach with 30s delay
+http_req_duration....: avg=3.49ms
+
+// Approach2:
+50 Vus approach with 30s delay
+50 users: http_req_duration....: avg=4.44ms
+100 users: http_req_duration....: avg=3.95ms
+
+// Approach3: Stage Based Load Testing(SBLT)
+- 10s: 5vus
+- 20s: 20vus
+- 30s: 50vus
+- 40s: 150vus
+- 50s: 40vus
+- 60s: 0
+http_req_duration....: avg=1.47ms
+checks_succeeded...: 50.00% 9654 out of 19308
+checks_failed......: 50.00% 9654 out of 19308
